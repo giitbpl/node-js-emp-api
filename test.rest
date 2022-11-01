@@ -1,0 +1,78 @@
+get http://localhost:3000
+###
+# POST http://localhost:3000/emp/login/abc@abc.com/12345 HTTP/1.1
+# Content-Type: application/json
+
+# {
+#     "email":"abc@abc.com",
+#     "pwd":"12345"
+# }
+####
+
+POST http://localhost:3000/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email":"abc@abc.com",
+    "pwd":"12345"
+}
+
+###
+POST http://localhost:3000/emp/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "id":"",
+    "name":"nitin gupta",
+    "email":"abc@abc.com",
+    "pwd":"12345",
+    "salt":""
+}
+
+###
+put http://localhost:3000/user/update HTTP/1.1
+Content-Type: application/json
+
+{
+    "id":4,
+    "name":"nitin gupta",
+    "email":"nitin@gmail.com"
+}
+###
+GET http://localhost:3000/session HTTP/1.1
+###
+GET http://localhost:3000/session/check HTTP/1.1
+
+###
+get http://localhost:3000/emp/all
+
+###
+POST http://localhost:3000/emp/newemp HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"amit soni",
+    "email":"amit@abc.com",
+    "city":"indore",
+    "dept":"accounts",
+    "salary":500000
+}
+
+###
+GET http://localhost:3000/emp/searchbyeid/1 HTTP/1.1
+
+###
+POST  http://localhost:3000/emp/getpic HTTP/1.1
+Content-Type: application/json
+
+{
+    "eid":2
+}
+###
+DELETE  http://localhost:3000/emp/del HTTP/1.1
+Content-Type: application/json
+Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiY0BhYmMuY29tIiwiaWF0IjoxNjY3MjEyMDM2fQ.tEkOPHYQQvifbkcf_IpIO_mpj8qFMz2u3l2koRKPR3E"
+
+{
+    "eid":2
+}

@@ -1,0 +1,1 @@
+insert into emp values (null,'harry potter','salse',45000,'bhopal','abc@abc.com','9.png')
